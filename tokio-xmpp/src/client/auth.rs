@@ -1,5 +1,5 @@
 use futures::stream::StreamExt;
-use sasl::client::mechanisms::{Anonymous, Plain, Scram};
+use sasl::client::mechanisms::Scram;
 use sasl::client::Mechanism;
 use sasl::common::scram::{Sha1, Sha256};
 use sasl::common::Credentials;
@@ -20,8 +20,6 @@ pub async fn auth<S: AsyncRead + AsyncWrite + Unpin>(
     let local_mechs: Vec<Box<dyn Fn() -> Box<dyn Mechanism + Send + Sync> + Send>> = vec![
         Box::new(|| Box::new(Scram::<Sha256>::from_credentials(creds.clone()).unwrap())),
         Box::new(|| Box::new(Scram::<Sha1>::from_credentials(creds.clone()).unwrap())),
-        Box::new(|| Box::new(Plain::from_credentials(creds.clone()).unwrap())),
-        Box::new(|| Box::new(Anonymous::new())),
     ];
 
     let remote_mechs: HashSet<String> = stream.stream_features.sasl_mechanisms()?.collect();
