@@ -4,8 +4,10 @@ xmpp-rs
 What's this?
 ------------
 
-A very much WIP set of rust XMPP library with the goals of being type-safe and
-well-tested.
+A fork of the original xmpp-rs repo, which contains for the src for the xmpp-rs lib used to build XMPP applications.
+
+Information from the developer
+------------------------------
 
 - `xmpp-rs` provides a high-level API for the protocol. You shouldn't need to
   know about the protocol to use it.
@@ -14,12 +16,18 @@ well-tested.
 - `minidom` is a DOM library quite specific for XMPP
 - `jid` is a Jid parsing library.
 
-Contact
+Contact the developer & me.
 -------
 
 There is an XMPP MUC for the discussion of this library, feel free to join! :)
 
+*Official (the devs)*
+
 [chat@xmpp.rs](xmpp:chat@xmpp.rs?join)
+
+*Unofficial (me)*
+
+[mailto:nixon@kuromi.li](nixon@kuromi.li)
 
 License
 -------
