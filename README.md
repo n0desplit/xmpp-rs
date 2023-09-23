@@ -27,7 +27,7 @@ There is an XMPP MUC for the discussion of this library, feel free to join! :)
 
 *Unofficial (me)*
 
-[mailto:nixon@kuromi.li](nixon@kuromi.li)
+[nixon@kuromi.li](mailto:nixon@kuromi.li)
 
 License
 -------
